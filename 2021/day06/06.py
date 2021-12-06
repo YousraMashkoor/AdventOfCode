@@ -1,20 +1,24 @@
-print("MY SOLUTION")
 
-initial_fish = []
+import sys
+from collections import defaultdict, Counter
 
-for line in open('input.txt'):
-    initial_fish.extend([int(x) for x in line.split(',')])
+infile = 'input.txt'
+X = Counter([int(x) for x in open(infile).read().strip().split(',')])
 
 
-for x in range(0, 256):
-    new_fish = []
-    for i,x in enumerate(initial_fish):
-        if x == 0:
-            initial_fish[i] = 6
-            new_fish.append(8)
-        else:
-            initial_fish[i] = x-1
-    initial_fish.extend(new_fish)
+def solve(S, n):
+    X = S
+    for day in range(n):
+        Y = defaultdict(int)
 
-# print(initial_fish)
-print(len(initial_fish))
+        for x,cnt in X.items():
+            if x==0:
+                Y[6] += cnt #new timer of current fishes
+                Y[8] += cnt #new fishes borned
+            else:
+                Y[x-1] += cnt
+        X = Y
+    return sum(X.values())
+
+print(solve(X, 80))
+print(solve(X, 256))
