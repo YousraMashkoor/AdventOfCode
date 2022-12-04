@@ -52,3 +52,13 @@ print(score1)
 print(score2)
 
 ## part 2 - wrong ans
+
+
+'''
+note:
+1. took alot of time in reading the input
+2. wasted time in coming up with a logic,
+a simple dict of all possible senarios (3x3 = 9)
+3. got stuck with the wrong logic in part 2
+would have been faster
+'''
