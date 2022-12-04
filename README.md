@@ -19,7 +19,7 @@ touch token.txt
 ```
 paste you AOC account token inside **token.txt** file.  
 To get your token...
-![aoc-user-token](https://github.com/YousraMashkoor/AdventOfCode/images/aoc-token.png)  
+![aoc-user-token](https://github.com/YousraMashkoor/AdventOfCode/blob/master/images/aoc-token.png)  
 Update the Day and Year in **get_input.py** file
 ```
 python3 ./get_input.txt
