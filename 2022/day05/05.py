@@ -48,3 +48,13 @@ for file, data in [('modified_sample.txt', data1),('modified_input.txt', data2)]
         # assert p2 == 4
 
     print(p1,p2)
+
+'''
+notes:
+1. manually created the list of stacks from input, this took 
+time. But probably coming up with a logic would have taken more time?
+2. Took alooooot of time figuring out how "reverse slicing" work. It was
+more of a hit and trial. Need ot revice these concepts.
+3. Got stuck with "shallow" and "deepcopy". -_-
+Eventually had to import the copy module. Need to remmeber these stuffs
+'''
